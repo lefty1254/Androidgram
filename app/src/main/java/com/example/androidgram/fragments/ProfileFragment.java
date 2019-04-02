@@ -30,6 +30,7 @@ public class ProfileFragment extends PostsFragment {
                 }
                 mPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
+                swipeContainer.setRefreshing(false);
                 for (Post post : posts) {
                     Log.d(TAG, "Post: " + post.getDescription() + " username: " + post.getUser().getUsername());
                 }
